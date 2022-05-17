@@ -1,1 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+$first: #e596a3;
+$secondary:#ae3863;
+$third:#33004b;
+$four:#5f0077 ;
+$theme-colors: (
+  primary: orange,
+  first:$first,
+  secondary:#ae3863,
+  third:#33004b,
+  four:#5f0077
+);
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 540px,
+//   lg: 540px,
+//   xl: 540px,
+//   xxl: 540px
+// );
+$font-sizes: (
+  6: 15px,
+  7:12px
+);
+
+html,
+body {
+  height: 100%;
+}
+
+.form {
+  max-width: 400px;
+  margin: 0px auto;
+}
+
+.card {
+  width: 90%;
+  margin: 0px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+select {
+  padding: 5px 15px;
+  width: 70%;
+  margin: 0px auto;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+div[dir="rtl"] select option {
+  direction: rtl;
+  background-color: rgb(143, 154, 223);
+  unicode-bidi: bidi-override;
+}
+.status-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(232, 32, 32);
+  border: 2px solid white;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.profile {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+.icon-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

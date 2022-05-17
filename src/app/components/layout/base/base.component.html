@@ -1,0 +1,177 @@
+<div>
+  <div class=" header row m-0 bg-first">
+    <div class="col mt-3 px-4">
+      <img src="assets/sidenav/arrowback.png" alt="">
+    </div>
+    <div class="col text-end mt-2">
+      <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+        <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+      </button>
+    </div>
+  </div>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" position="end">
+      <div [style.background-image]="'url(assets/sidenav/sidenav.png)'">
+        <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
+        <h4 class="name m-0 p-0">John Smith</h4>
+        <p class="fs-7 text-dark">مطلق-31 سنة</p>
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button" routerLink="/home" routerLinkActive="active">
+          <span>الرئيسية</span>
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/messages" routerLinkActive="active">
+          <span>رسائلي</span>
+          <mat-icon> mail_outline</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/home">
+          <span>الأشعارات</span>
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <button mat-button [matMenuTriggerFor]="users" class="menu-button" >
+          <span>الأعضاء</span>
+          <mat-icon>people</mat-icon>
+        </button>
+        <mat-menu #users="matMenu" class="text-center" >
+          <button mat-menu-item class="text-end" routerLink="/users/active">
+            <span>المتواجدون الأن</span>
+            <img src="assets/sidenav/active-user-icon.png" class="mx-2">
+          </button>
+          <button mat-menu-item class="text-end">
+            <span>من زار صفحة بياناتى</span>
+            <img src="assets/sidenav/friend_of_friends-icon.png" class="mx-2">
+          </button>
+          <button mat-menu-item class="text-end" routerLink="/users/new">
+            <span>الأعضاء الجدد</span>
+            <img src="assets/sidenav/newuser-icon.png" class="mx-2">
+          </button>
+          <button mat-menu-item class="text-end" routerLink="/users/premium">
+            <span>الأعضاء المتميزون</span>
+            <img src="assets/sidenav/premium-icon.png" class="mx-2" >
+          </button>
+          <button mat-menu-item class="text-end" routerLink="/users/health">
+            <span>الحالة الصحية</span>
+            <img src="assets/sidenav/health-icon.png" class="mx-2">
+          </button>
+        </mat-menu>
+        <button mat-button class="menu-button" routerLink="/home">
+          <span>البحث</span>
+          <mat-icon>search</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/profile">
+          <span>إدارة حسابى</span>
+          <mat-icon>person</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/about">
+          <span>الأشتراكات</span>
+          <mat-icon>credit_card</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/home">
+          <span>إعداداتى</span>
+          <mat-icon>settings</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/home">
+          <span>قائمة الأهتمام</span>
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/home">
+          <span>قائمة التجاهل</span>
+          <mat-icon>thumb_down</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/home">
+          <span>المتواجدون الأن</span>
+          <mat-icon>brightness_1</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/home">
+          <span>الشروط والأحكام</span>
+          <mat-icon> list_alt</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/home">
+          <span>أتصل بنا</span>
+          <mat-icon> call</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/home">
+          <span>حول التطبيق</span>
+          <mat-icon>info</mat-icon>
+        </button>
+        <button mat-button class="menu-button" routerLink="/home">
+          <span>خروج</span>
+          <mat-icon>notifications</mat-icon>
+        </button>
+      </div>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content " [style.background-image]="'url(assets/home/home1.png)'">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container h-100 bg-first text-end p-0">
+
+  <mat-sidenav-container>
+    <mat-sidenav mode="over">
+      <div class="text-center sidenav h-100" [ngStyle]="{backgroundImage:'url(assets/sidenav/sidenav.png)'}">
+        <div class="sideheader position-relative">
+          <div class="position-absolute bottom-0 w-100">
+            <div class='icon-container mx-auto'>
+              <img class="profile" src="assets/profile.png" />
+              <div class='status-circle'>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="p-0 m-0 text-white">ADHAM MOHAMED</h4>
+        <p class="p-0 m-0">مطلق-31 سنة</p>
+        <div class="mt-2">
+          <ul class="list text-end">
+            <li>الرئيسية<span class="ms-3"><img src="assets/sidenav/home.png" alt=""></span></li>
+            <li>الأشعارات<span class="ms-3"><img src="assets/sidenav/notification-icon.png" alt=""></span></li>
+            <li>البحث<span class="ms-3"><img src="assets/sidenav/search-icon.png" alt=""></span></li>
+            <li>إدارة حسابى<span class="ms-3"><img src="assets/sidenav/profile-icon.png" alt=""></span></li>
+            <li>الأشتراكات<span class="ms-3"><img src="assets/sidenav/bank-icon.png" alt=""></span></li>
+            <li>إعداداتى<span class="ms-3"><img src="assets/sidenav/setting-icon.png" alt=""></span></li>
+            <li>قائمة الأهتمام<span class="ms-3"><img src="assets/sidenav/like-icon.png" alt=""></span></li>
+            <li>قائمة التجاهل<span class="ms-3"><img src="assets/sidenav/unlike-icon.png" alt=""></span></li>
+            <li>المتواجدون الأن<span class="ms-3"><img src="assets/sidenav/active-icon.png" alt=""></span></li>
+            <li>الشروط والأحكام<span class="ms-3"><img src="assets/sidenav/terms-icon.png" alt=""></span></li>
+            <li>أتصل بنا<span class="ms-3"><img src="assets/sidenav/contact-icon.png" alt=""></span></li>
+            <li>حول التطبيق<span class="ms-3"><img src="assets/sidenav/information-icon.png" alt=""></span></li>
+            <li>خروج<span class="ms-3"><img src="assets/sidenav/logout-icon.png" alt=""></span></li>
+          </ul>
+        </div>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="container row m-0 bg-first p-4 w-100 bg-dark" style="position:fixed;z-index: 1030;">
+        <span class="text-white col text-start">
+          <img src="assets/sidenav/arrowback.png" alt="">
+          <mat-icon>keyboard_backspace</mat-icon>
+        </span>
+        <span class="col ">
+          <mat-icon (click)="drawer.toggle()" class="text-white">menu</mat-icon>
+        </span>
+      </div>
+      <div class="home text-center bg-secondary pt-3" [style.backgroundImage]="'url(assets/home/home.png)'">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+</div> -->

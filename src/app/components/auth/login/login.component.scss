@@ -1,0 +1,43 @@
+.login {
+    
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: calc(100vh - 65px );
+    overflow: auto;
+}
+
+
+.input {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px;
+    width: 85%;
+    margin: 0px auto;
+
+    img {
+        width: 15px;
+        height: 15px;
+        margin: 0px auto;
+    }
+}
+
+input {
+    // border: none;
+    margin-right: 10px;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+    display: inline-block;
+    width: auto;
+    margin-left: 5px;
+    border-radius: 50%;
+}

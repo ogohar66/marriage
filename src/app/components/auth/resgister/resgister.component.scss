@@ -1,0 +1,43 @@
+.space {
+    height: 150px;
+}
+
+
+.card {
+    width: 90%;
+    margin: 0px auto;
+
+    border-radius: 15px;
+    overflow: hidden;
+}
+.register {
+    height: calc(100vh - 65px);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+
+
+.input {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px;
+    width: 90%;
+    margin: 0px auto;
+
+    img {
+        width: 15px;
+        height: 15px;
+        margin: 0px auto;
+    }
+}
+
+input {
+    // border: none;
+    margin-right: 10px;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}

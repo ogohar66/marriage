@@ -1,0 +1,55 @@
+<div class="row m-0">
+    <div class="space"></div>
+    <div class="col-6 text-start p-0">
+        <span class="px-4 py-2 bg-secondary fs-5 rounded-end">
+            الحالات الصحية  
+        </span>
+    </div>
+    <div class="col-6 text-center">
+        <img src="assets/home/logo-icon.png" class="img-fluid" width="100px" height="100px">
+    </div>
+</div>
+<div class="card mt-5  form border-secondary mx-auto mb-3 text-center shadow">
+    <div class="card-body p-0 border-2 ">
+        <div class="my-2 " dir="rtl">
+            <select class="bg-four">
+                <option selected disabled>كل الدول</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="my-2 " dir="rtl">
+            <select class="bg-four">
+                <option selected disabled>طبيعة الحالة الصحية</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="btn-group my-2" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-first border-four btn-sm px-4">الكل</button>
+            <button type="button" class="btn btn-first border-four btn-sm px-4">الذكور</button>
+            <button type="button" class="btn btn-first border-four btn-sm px-4">الأناث</button>
+        </div>
+        <p class="fs-6 p-2 text-four ">1152 عضو</p>
+        <div class="users row text-end fs-6 text-four mx-auto p-2 border-secondary p-3 bg-light" *ngFor="let user of activeUsers">
+            <div class="col text-start info p-0">
+                {{user.age}} سنة
+                <mat-divider></mat-divider><br>
+            </div>
+            <div class="col p-0 info">
+                <span class="p-3">{{user.name}}</span>
+                <mat-divider></mat-divider>
+                <span class="p-3">{{user.country}}\{{user.city}}</span>
+            </div>
+            <div class='icon-container align-bottom col p-0'>
+                <img class="profile"
+                    src="https://cdn2.iconfinder.com/data/icons/flatfaces-everyday-people-square/128/beard_male_man_face_avatar-512.png" />
+                <div class='status-circle'>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
