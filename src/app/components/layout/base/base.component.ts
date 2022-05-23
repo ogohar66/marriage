@@ -17,7 +17,7 @@ export class BaseComponent implements OnInit {
 
   ngAfterViewInit() {
     this.observer
-      .observe(['(max-width: 800px)'])
+      .observe(['(max-width: 760px)'])
       .pipe(delay(1))
       .subscribe((res:any) => {
         if (res.matches) {

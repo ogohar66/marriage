@@ -1,0 +1,30 @@
+ul{
+    list-style: none;
+}
+li{
+    margin: 0px auto;
+    width: 100%;
+    font-size: 20px;
+    padding:20px; 
+    span{
+
+        padding: 15px;
+        border-radius: 15px;
+        max-width: 250px;
+    }
+    
+}
+.start{
+    
+    span{background-color: rgb(36, 115, 184)};
+    text-align: start;
+}
+.end{
+       
+    span{background-color: rgb(191, 211, 229)};
+   
+    text-align: end;
+}
+
+
+

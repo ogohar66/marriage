@@ -1,0 +1,11 @@
+
+<div>
+    <ul>
+        <li *ngFor="let message of messages"  [class.end]="message.from==2" [class.start]="message.from==1">
+            <span >
+                {{message.text}}
+            </span>
+        </li>
+    </ul>
+
+</div>
